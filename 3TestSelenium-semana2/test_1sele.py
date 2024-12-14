@@ -5,11 +5,17 @@ import unittest
 import time
 from time import sleep
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+# Configurar opciones para el navegador Chrome
+options = Options()
+options.add_argument('--headless')  # Ejecuta Chrome en modo headless
+options.add_argument('--no-sandbox')  # Recomendado en entornos de CI como GitHub Actions
+options.add_argument('--disable-dev-shm-usage')  # Ayuda a evitar algunos errores en contenedores
 
 class eis_test(unittest.TestCase):
 
 	def setUp(self):
-		self.browser = webdriver.Chrome()
+		self.browser = webdriver.Chrome(options=options)
 
 	def test_campus(self):
 		browser = self.browser
