@@ -26,6 +26,6 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run Unit Test
       run: |
-        python -m unittest discover -s Calidad-Testgitactions
+        python -m unittest discover -s Testgitactions-semana2
     - name: Ready for deploy
       run: echo "Listo"
