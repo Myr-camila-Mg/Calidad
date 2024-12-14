@@ -1,12 +1,14 @@
-name: Hola mundo Workflow
+name: Hola Mundo Workflow
+
 on:
   push:
-    branches: 
-      -main
+    branches:
+      - main
+
 jobs:
   say-hello:
     runs-on: ubuntu-latest
 
-    steps: 
+    steps:
       - name: Saludar
-      run: echo "¡ Hola mundo desde GitHub Actions !" 
+        run: echo "¡Hola Mundo desde GitHub Actions!"
