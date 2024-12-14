@@ -33,6 +33,12 @@ class eis_test(unittest.TestCase):
 		sleep(2)
 		res = browser.find_element(By.XPATH, '//*[@id="page-header"]/div[2]/h2')
 		self.assertEqual('¡Hola, MYRIAM CAMILA! 👋', res.text)
+
+	def test_numero(self):
+		browser = self.browser
+		browser.get("https://www.unillanos.edu.co/")
+		numero = browser.find_element(By.XPATH, '//*[@id="jm-footer-center"]/div/p[10]')
+		self.assertEqual('Whatsapp +57 322 292 31 94', numero.text)
 	
 	def tearDown(self):
 		print()
