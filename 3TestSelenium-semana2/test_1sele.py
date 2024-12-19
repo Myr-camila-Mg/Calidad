@@ -44,7 +44,7 @@ class eis_test(unittest.TestCase):
 		browser = self.browser
 		browser.get("https://www.unillanos.edu.co/")
 		numero = browser.find_element(By.XPATH, '//*[@id="jm-footer-center"]/div/p[10]')
-		self.assertEqual('Whatsapp +57 322 292 31 94', numero.text)
+		self.assertEqual('línea nacional 018000 918 641', numero.text)
 	
 	def tearDown(self):
 		print()
