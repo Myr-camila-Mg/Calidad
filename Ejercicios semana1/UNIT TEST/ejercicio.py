@@ -11,7 +11,6 @@ lst=[1,2,3,4]
 res = total(lst)
 print(res)
 
-
 # Se agrega 5 al numero que se envia
 def addit(x):
     y = x+5
